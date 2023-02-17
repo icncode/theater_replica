@@ -1,0 +1,144 @@
+.container {  
+    display: grid;
+    grid-template-columns: 0.7fr 1fr 1fr 0.7fr;
+    grid-template-rows: 70px 1fr 40px 0.9fr 1.1fr;
+    gap: 30px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navbar navbar navbar navbar"
+      "hero_image hero_image hero_image hero_image"
+      ". divider divider ."
+      ". cards cards ."
+      "footer footer footer footer";
+}
+  
+.navbar {  
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . ."; 
+    grid-area: navbar;
+    
+    /* View past container width*/
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+    background-color: black;
+    color: white;
+}
+
+#logo{
+    font-family: art;
+    font-weight: 100;
+    padding-left: 5em;
+}
+
+#links{
+    display: flex; 
+    justify-content: space-between;
+}
+
+a, a:link, a:visited{
+    text-decoration: none;
+    color: white;
+}
+  
+.hero_image {  
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr ;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        " .";
+    grid-area: hero_image;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+}
+
+.screen-text {
+    position: absolute;
+    top:35%;
+    left:50%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    color: white;
+    font-size: 8em;
+    font-weight: 400;
+    font-family: art;
+    white-space: nowrap;
+  }
+
+.divider { 
+    grid-area: divider; 
+    border: 1px solid black;
+    background-color: rgb(247, 247, 247);
+    padding-left: 3em;
+}
+  
+.cards {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "card1 card1 card1"
+        "card2 card2 card2"
+        "card3 card3 card3"
+        "card4 card4 card4";
+    grid-area: cards;
+    border-bottom:1px solid grey;
+}
+
+
+
+.card1 { grid-area: card1;
+    border-bottom:1px solid grey!important;
+    margin-bottom: 6px!important; }
+
+.card2 { grid-area: card2; 
+    border-bottom:1px solid grey!important;
+    margin-bottom: 6px!important;}
+
+.card3 { grid-area: card3; 
+    border-bottom:1px solid grey!important;
+    margin-bottom: 6px!important;}
+
+.card4 { grid-area: card4; }
+
+.footer {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        ". . . ."
+        "map info shows social"
+        ". info shows social";
+    grid-area: footer;
+    background-color: black;
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+    background-color: black;
+    color: white;
+}
+
+.map { grid-area: map; 
+    width: 100px;
+    height:auto;
+}
+
+.info { grid-area: info; }
+
+.shows { grid-area: shows; }
+
+.social { grid-area: social; }
